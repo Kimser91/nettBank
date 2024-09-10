@@ -1,0 +1,32 @@
+oppdragstekst: 
+Oppgave - Nettbank
+Lag din egen nettbank 🏦
+
+Der en bruker kan betale regninger, overføre til forskjellige kontoer og så videre.
+
+Forslag til start
+
+En del banker har demo versjoner av nettbanken sin som man kan utforske og teste ut.
+
+Her en DNB sin demo https://www.dnb.no/portalfront/demo/person/nettbank/startsiden.php
+
+Fokuser først på et skjermbilde - hvordan vil du modellere opp denne siden?
+
+Lykke til med nettbanken!
+
+
+plan:
+
+bygge en prototype med basis funksjonalitet:
+overføre penger mellom kontoer, betale regninger, og overføre penger til annen bruker(opt)
+
+bygge opp forskjellige views(sider) som gir forskjellig funksjoinalitet ie. administrator oversikt, brukerside og en hovedside/velkomstside.
+
+for brukersiden som er viktigst for prototypen, skal brukeren ha tilgang til sine kontoer, ha en knapp for å kunne betale regninger 
+og en knapp for å kunne overføre mellom kontoer.
+
+etter det ønsker jeg å bygge en velkomstside/hovedside hvor det skal være informasjon om bankens tjenester og
+evt releveante nyheter og innlogging for brukere.
+
+til slutt ønsker jeg å utvide med en admin side som gir bankens arbeidere muligheten til å ha oversikt over kundenes info og kontoer, 
+evt om mulig med et nivå system slik at ikke alle ansatte har tilgang til alt,
