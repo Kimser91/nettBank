@@ -1,3 +1,4 @@
+let html = document.getElementById('app');
 
 
 const model = {
@@ -34,9 +35,12 @@ const model = {
             }
         ],
 
-        clock: '',
-        news: [],
+        clock: '00:00',
+        newsFromBank: [],
+        financialNews: [],
         
 
     },
 }
+
+let p = model.data;

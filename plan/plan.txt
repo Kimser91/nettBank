@@ -29,4 +29,4 @@ etter det ønsker jeg å bygge en velkomstside/hovedside hvor det skal være inf
 evt releveante nyheter og innlogging for brukere.
 
 til slutt ønsker jeg å utvide med en admin side som gir bankens arbeidere muligheten til å ha oversikt over kundenes info og kontoer, 
-evt om mulig med et nivå system slik at ikke alle ansatte har tilgang til alt,
+evt om mulig med et nivå system slik at ikke alle ansatte har tilgang til alt.
