@@ -5,6 +5,7 @@ const model = {
     app: {
         userName: '',
         password: '',
+        id: '',
         page: 'UserPage',
     },
     input:{
@@ -13,15 +14,16 @@ const model = {
         accountNumber: '',
     },
     data: {
-       
+        inView: '',
+        accountView: '',
         users: [
             {
-                name: '',
+                name: 'Kim',
                 userName: '',
                 password: '',
-                MainBalance: '',
-                SavingsAccount: '',
-                Billingaccount: '',
+                MainBalance: 7000,
+                SavingsAccount: 30000,
+                Billingaccount: 15000,
             }
         ],
 
@@ -36,8 +38,8 @@ const model = {
         ],
 
         clock: '00:00',
-        newsFromBank: [],
-        financialNews: [],
+        newsFromBank: ['Now interests are only 3.5% Get your new loans today!'],
+        financialNews: ['Financial world are on the brink of colaps, save your money!'],
         
 
     },

@@ -1,14 +1,13 @@
-updateView();
+mainView();
 
 function updateView() {
     html.innerHTML = /*HTML*/
         `
     <div class="container">
-        <div class="topBox"><div class="logo" onclick="mainView()">Logo here!</div></div>
+        <div class="topBox"><div class="logo" onclick="mainView()">The Bank</div> <div class="loginButton" onclick="userView()">Login</div></div>
      
         <div class="mainBox">
-            <div class="leftMainBox"> News from the bank:<br> ${printBankingNews()}</div>
-            <div class="rightMainBox">Financial News:<br> ${printFinancialNews()}</div>
+            ${p.inView}
         </div>
         
         <div class="leftBox"></div>
@@ -19,9 +18,16 @@ function updateView() {
     `;
 }
 
+function mainView() 
+{
+    p.inView = `<div class="leftMainBox"> News from the bank:<br> ${printBankingNews()}</div>
+            <div class="rightMainBox">Financial News:<br> ${printFinancialNews()}</div>`
+           updateView() 
+}
+
 function printBankingNews() 
 {
-    let list
+    let list = '';
     for(let i = 0; i < p.newsFromBank.length; i++)
         {
             list += 
@@ -33,4 +39,16 @@ function printBankingNews()
     return list
 }
 
-function printFinancialNews() {}
+function printFinancialNews() 
+{
+    let list = '';
+    for(let i = 0; i < p.financialNews.length; i++)
+        {
+            list += 
+            `
+            <li> ${p.financialNews[i]}
+            `
+        }
+
+    return list
+}

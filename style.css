@@ -74,6 +74,8 @@
     background-color: lightgray;
     border-width: 3px;
     border-style: solid;
+    font-size: xx-large;
+    font-weight: bolder;
 }
 
 .rightMainBox
@@ -85,6 +87,8 @@
     background-color: lightgray;
     border-width: 3px;
     border-style: solid;
+    font-size: xx-large;
+    font-weight: bolder;
 }
 
 .clock
@@ -102,8 +106,42 @@
     height: 85px;
     background-color: bisque;
     border-radius: 50%;
+    font-size: xx-large;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
    
 }
 
 .logo:hover { opacity: 80%;}
 .logo:active {opacity: 60%;}
+
+.loginButton
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: darkslategray;
+    height: 30px;
+    width: 60px;
+    font-weight: bold;
+    color: darksalmon;
+}
+
+.loginButton:hover { opacity: 80%;}
+.loginButton:active {opacity: 60%;}
+
+.accountView
+{
+    background-color: aliceblue;
+    width: 900px;
+    height: 900px;
+    margin-top: 50px;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+button
+{
+    font-size: 30px;
+    font-weight: bold;
+}
