@@ -27,13 +27,20 @@ function payBillsView() {
     p.accountView = /*html*/
         `
  <div>From: Billing Account</div>
-<div> <input type="number" placeholder="To::"></div>
-<div> <input type="number" placeholder="KID:"></div>
-<div> <input type="number" onchange="payBill(this.value)" placeholder="Amount:"></div>
-<button>Pay</button> <button onclick="cancel()">Cancel</button>
+
+<div> <input id="" type="number" placeholder="To:" onchange="changeAccountNumber(this.value)"></div>
+<div> <input id="" type="number" placeholder="KID:" onchange="changeKIDNumber(this.value)"></div>
+<div> <input id="" type="number" placeholder="Amount:" onchange="changeAmount(this.value)"></div>
+<button onclick="payBill()">Pay</button> <button onclick="cancel()">Cancel</button>
+<div>${model.data.users[1].MainBalance}</div>
+<div>${model.data.users[1].name}</div>
  `
  userView()
 }
 
 function cancel() 
-{ p.accountView = ''; userView()}
+{   p.accountView = '';
+    i.amount = null;
+    i.kid = null;
+    i.accountNumber = null;
+     userView()}
