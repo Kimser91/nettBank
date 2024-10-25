@@ -1,15 +1,15 @@
-let html = document.getElementById('app');
-
 
 const model = {
     app: {
-        userName: '',
-        password: '',
-        id: '',
+        user: {},
         page: 'UserPage',
+        inView: '',
+        errorMessage: '',
+        html: document.getElementById('app'),
     },
     input:{
-        
+        userName: null,
+        password: null,
         transfer: 0,
         
         payBills: {
@@ -19,13 +19,13 @@ const model = {
         },
     },
     data: {
-        inView: '',
+       
         accountView: '',
         users: [
             {
                 name: 'Kim',
-                userName: '',
-                password: '',
+                userName: 'a',
+                password: 'a',
                 accountNumber: 1,
                 MainBalance: 7000,
                 SavingsAccount: 30000,
@@ -34,8 +34,8 @@ const model = {
 
             {
                 name: 'Vigdis',
-                userName: '',
-                password: '',
+                userName: 'b',
+                password: 'b',
                 accountNumber: 2,
                 MainBalance: 7000,
                 SavingsAccount: 30000,
@@ -44,8 +44,8 @@ const model = {
 
             {
                 name: 'Lars',
-                userName: '',
-                password: '',
+                userName: 'c',
+                password: 'c',
                 accountNumber: 3,
                 MainBalance: 7000,
                 SavingsAccount: 30000,
@@ -71,4 +71,3 @@ const model = {
     },
 }
 
-let p = model.data;

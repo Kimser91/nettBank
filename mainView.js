@@ -1,13 +1,13 @@
 mainView();
 
 function updateView() {
-    html.innerHTML = /*HTML*/
+    model.app.html.innerHTML = /*HTML*/
         `
     <div class="container">
-        <div class="topBox"><div class="logo" onclick="mainView()">The Bank</div> <div class="loginButton" onclick="userView()">Login</div></div>
+        <div class="topBox"><div class="logo" onclick="mainView()">The Bank</div> <div class="loginButton" onclick="loginView()">Login</div></div>
      
         <div class="mainBox">
-            ${p.inView}
+            ${model.app.inView}
         </div>
         
         <div class="leftBox"></div>
@@ -20,7 +20,7 @@ function updateView() {
 
 function mainView() 
 {
-    p.inView = `<div class="leftMainBox"> News from the bank:<br> ${printBankingNews()}</div>
+    model.app.inView = `<div class="leftMainBox"> News from the bank:<br> ${printBankingNews()}</div>
             <div class="rightMainBox">Financial News:<br> ${printFinancialNews()}</div>`
            updateView() 
 }
@@ -28,11 +28,11 @@ function mainView()
 function printBankingNews() 
 {
     let list = '';
-    for(let i = 0; i < p.newsFromBank.length; i++)
+    for(let i = 0; i < model.data.newsFromBank.length; i++)
         {
             list += 
             `
-            <li> ${p.newsFromBank[i]}
+            <li> ${model.data.newsFromBank[i]}
             `
         }
 
@@ -42,11 +42,11 @@ function printBankingNews()
 function printFinancialNews() 
 {
     let list = '';
-    for(let i = 0; i < p.financialNews.length; i++)
+    for(let i = 0; i < model.data.financialNews.length; i++)
         {
             list += 
             `
-            <li> ${p.financialNews[i]}
+            <li> ${model.data.financialNews[i]}
             `
         }
 
