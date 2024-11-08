@@ -1,10 +1,10 @@
-mainView();
+pageSwitch();
 
 function updateView() {
     model.app.html.innerHTML = /*HTML*/
         `
     <div class="container">
-        <div class="topBox"><div class="logo" onclick="mainView()">The Bank</div> <div class="loginButton" onclick="loginView()">Login</div></div>
+        <div class="topBox"><div class="logo" onclick="mainView()">The Bank</div> ${loginBannerButton()} </div>
      
         <div class="mainBox">
             ${model.app.inView}
@@ -16,6 +16,17 @@ function updateView() {
         <div class="bottomBox">about us button, and other information buttons, + cosmetics</div>
 </div>
     `;
+}
+
+function loginBannerButton()
+{
+    let html = ''
+    if(model.app.user != '' || model.app.user != null)
+        {
+            html = `<button onclick="loginView()">Logg Inn</button>`
+        }
+    else {html = `<button onclick="model.app.user = '', model.app.page = 'mainView', pageSwitch()">Logg Ut</button>`}
+    return html;
 }
 
 function mainView() 
@@ -52,3 +63,24 @@ function printFinancialNews()
 
     return list
 }
+
+function pageSwitch()
+{
+    switch(model.app.page) 
+    {
+        case('logInView'):
+            loginView();
+            break;
+        case('userView'):
+            userView()
+            break;
+        case('mainView'):
+            mainView()
+            break;
+    }
+}
+
+
+
+
+
